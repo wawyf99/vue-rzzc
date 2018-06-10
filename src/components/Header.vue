@@ -1,6 +1,9 @@
 <template>
   <div class="ui-header">
-      {{title}}
+      <div class="ui-back">
+        <i class="fa fa-angle-left fa-lg" aria-hidden="true"></i>
+        返回
+      </div>
   </div>
 </template>
 <script>
@@ -9,9 +12,13 @@
       return {
         title: '这里是一个测试'
       }
+    },
+    created(){
+
     }
   }
+
 </script>
 <style>
-  @import '../assets/style/header.scss';
+  @import '../assets/style/header.less';
 </style>

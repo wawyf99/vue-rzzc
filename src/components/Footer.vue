@@ -1,25 +1,31 @@
 <template>
   <div class="ui-footer">
-      <div class="footer-box">
-        <a href="">首页</a>
-        &Iota;
-        <a href="">关于我们</a>
-        &Iota;
-        <a href="">意见反馈</a>
-      </div>
-      <p>由 <a href="">诺亚方舟</a> 提供技术支持</p>
-      <p>CopyRight©2014  AllMobilize Inc. 京ICP备13033158</p>
+    <div class="ui-invite">亦柔邀请你加入群聊</div>
+    <input type="button" value="加入群聊" class="ui-btn" @click="show">
+    <div class="ui-role">
+      <p>1.您和群里其他人都不是朋友关系，请注意隐私安全。</p>
+      <p>2.该群聊人数较多，为减少新信息给您带来的打扰，建议进群后屏蔽消息通知。</p>
+    </div>
   </div>
 </template>
 <script>
+  import { XButton} from 'vux'
   export default {
+    components: {
+      XButton
+    },
     data () {
       return {
-        title: '这里是一个测试2222'
+        title: ''
+      }
+    },
+    methods:{
+      show(){
+        this.$router.push({name: '邀您加入群聊'});
       }
     }
   }
 </script>
 <style scoped lang="scss" >
-  @import '../assets/style/footer.scss';
+  @import '../assets/style/footer.less';
 </style>

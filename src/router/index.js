@@ -1,17 +1,23 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Main from '../views/Main';
+import Show from '../views/Show';
 
 Vue.use(Router);
 
 const router = new Router({
-  hashbang: false,
+  hashbang: true,
   mode:'history',
   routes: [
     {
       path: '/',
-      name: '人在咫尺 心远天涯',
+      name: '群聊邀请',
       component: Main
+    },
+    {
+      path: '/show',
+      name: '邀您加入群聊',
+      component: Show
     }
   ]
 });

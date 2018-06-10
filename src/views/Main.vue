@@ -1,28 +1,34 @@
 <template>
   <div>
     <Header></Header>
-    <SwiperBox></SwiperBox>
     <div class="main">
-      {{msg}}
+      <div class="ui-logo"></div>
+      <div class="ui-title">这是一个测试</div>
+      <div class="ui-num">352人</div>
     </div>
     <Footer></Footer>
   </div>
 
 </template>
 <style>
-  @import '../assets/style/main.scss';
+  @import '../assets/style/main.less';
 </style>
 <script>
   import Header from "../components/Header";
   import Footer from "../components/Footer";
-  import SwiperBox from '../components/SwiperBox'
   export default {
-    components: {Header, Footer, SwiperBox},
+    components: {Header, Footer},
     name: 'Main',
     data () {
       return {
-        msg: '这里是SECTION'
+        msg: ''
       }
+    },
+    created(){
+
+/*      documentElement.clientHeight.style.height = "100%";
+      documentElement.body.style.height = "100%";
+      document.getElementById("app").style.height = "100%";*/
     }
   }
 </script>
